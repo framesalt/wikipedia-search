@@ -1,0 +1,73 @@
+$primaryColor: #337ab7;
+$primaryFontFamily: Monospace;
+$primaryFontSize: 15px;
+
+
+body {
+  color: $primaryColor;
+  font-family: $primaryFontFamily;
+  font-size: $primaryFontSize;
+}
+
+.search-container {
+ 
+  width: 100%;
+  
+  border-style: solid;
+  border-color: #337ab7;
+  border-radius: 15px;
+  
+  margin-top: 5px;
+  
+  padding: 20px;
+  
+  animation: opacityInc 0.8s ease;
+  
+  
+#searchField {
+  text-align: center;
+  position: relative;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#buttonsBar {
+  position: relative;
+  width: 160px;
+  display: block;
+  margin: 5px auto;
+}
+  
+}
+
+.node-container {
+  @extend .search-container;
+  
+}
+
+@media only screen and (max-width: 417px){
+  .search-container {
+    #searchField {
+      width: 85%;
+    }
+    #buttonsBar {
+      width: 150px !important;
+      button {
+        font-size: 11px !important;
+      }
+    }
+  }
+}
+
+@keyframes opacityInc {
+  
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+  
+}
